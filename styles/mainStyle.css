@@ -3,16 +3,18 @@
     margin: 0;
 }
 
-html, body{
+html, body {
     min-height: 100vh;
 }
 
 /* Font */
+
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Background Colors */
+
 .PrimaryBackground {
     background-color: #242325;
 }
@@ -39,7 +41,7 @@ body {
     color: #C8C8C8;
 }
 
-.SecondaryText{
+.SecondaryText {
     color: #b3b3b3;
 }
 
@@ -63,18 +65,17 @@ body {
     flex-direction: column;
 }
 
-.Card {
+.Card {}
 
-}
-
-.hidden{
+.hidden {
     visibility: collapse;
     opacity: 0;
     height: 0;
 }
 
 /* NavBar */
-#NavBar ul{
+
+#NavBar ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -105,7 +106,7 @@ body {
     transition: 0.5s;
 }
 
-.NavBarItem a{
+.NavBarItem a {
     text-decoration: none;
     margin: auto;
     width: 100%;
@@ -141,24 +142,53 @@ section {
 }
 
 /* Transitions */
-@keyframes show{
-    from{
+
+@keyframes show {
+    from {
         opacity: 0;
         visibility: collapse;
     }
-    to{
+    to {
         opacity: 1;
         visibility: visible;
     }
 }
 
-@keyframes hide{
-    from{
+@keyframes hide {
+    from {
         opacity: 1;
         visibility: visible;
     }
-    to{
+    to {
         opacity: 0;
         visibility: collapse;
     }
+}
+
+/* Content Elements */
+
+#Name {
+    top: 35vh;
+    left: 12vw;
+    position: absolute;
+    width: 396px;
+    height: 183px;
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 95px;
+}
+
+#Career {
+    top: 65vh;
+    left: 24vw;
+    position: absolute;
+    width: 271px;
+    height: 30px;
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
 }
