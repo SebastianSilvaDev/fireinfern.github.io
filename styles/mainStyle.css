@@ -67,6 +67,12 @@ body {
 
 }
 
+.hidden{
+    visibility: collapse;
+    opacity: 0;
+    height: 0;
+}
+
 /* NavBar */
 #NavBar ul{
     display: flex;
@@ -120,4 +126,39 @@ body {
 .Content {
     min-height: 100vh;
     margin-left: 60px;
+}
+
+.show {
+    animation: show 2s ease-in-out 2s;
+}
+
+.hide {
+    animation: hide 2s ease-in-out 0s;
+}
+
+section {
+    height: 100vh;
+}
+
+/* Transitions */
+@keyframes show{
+    from{
+        opacity: 0;
+        visibility: collapse;
+    }
+    to{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes hide{
+    from{
+        opacity: 1;
+        visibility: visible;
+    }
+    to{
+        opacity: 0;
+        visibility: collapse;
+    }
 }
