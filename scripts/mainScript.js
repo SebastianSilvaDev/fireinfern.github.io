@@ -37,10 +37,14 @@ Home.addEventListener("animationend", () => {
     if(Home.classList.contains("show")){
         Home.classList.remove("show");
         Home.classList.remove("hidden");
+        document.getElementById("Career").classList.remove("hidden");
+        document.getElementById("Career").classList.add("writingeffect");
     }
     if(Home.classList.contains("hide")){
         Home.classList.remove("hide");
         Home.classList.add("hidden");
+        document.getElementById("Career").classList.add("hidden");
+        document.getElementById("Career").classList.remove("writingeffect");
     }
 });
 File.addEventListener("animationend", () => {

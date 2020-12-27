@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-html, body {
-    min-height: 100vh;
-}
-
 /* Font */
 
 body {
@@ -89,7 +85,7 @@ body {
 
 #NavBar {
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
     width: 60px;
     position: fixed;
     display: block;
@@ -125,20 +121,21 @@ body {
 /* Content */
 
 .Content {
-    min-height: 100vh;
+    height: 100vh;
+    width: calc(100vw - 60px);
+    margin: 0;
     margin-left: 60px;
 }
 
 .show {
-    animation: show 2s ease-in-out 2s;
+    animation: show 1s ease-in-out 1s;
 }
 
 .hide {
-    animation: hide 2s ease-in-out 0s;
+    animation: hide 1s ease-in-out 0s;
 }
 
 section {
-    height: 100vh;
 }
 
 /* Transitions */
@@ -162,6 +159,24 @@ section {
     to {
         opacity: 0;
         visibility: collapse;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 271px;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
     }
 }
 
@@ -191,4 +206,41 @@ section {
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
+}
+
+.writingeffect {
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 3.5s steps(18, end), blink-caret .75s step-end infinite;
+}
+
+/* Buttons */
+
+.SolidButton {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.github {
+    background-color: #24292e;
+}
+
+.linkedin {
+    background-color: #0e76a8;
+}
+
+.buttonContainer {
+    text-align: center;
+    position: relative;
+    top: 45vh;
 }
